@@ -3,6 +3,7 @@ Progetto MAADB - Laurea Magistrale Informatica Unito
 
 # Connettere MongoDB come Container Docker in VSCode
 ## Docker
+### Mongo
 Scaricare l'ultima immagine di MongoDB tramite il comando:
 ```
 docker pull mongo
@@ -31,6 +32,23 @@ db.createUser({
 ```
 
 A questo punto si possono creare database e collezioni.
+
+### Postgres
+
+Scaricare l'ultima immagine di Postgres tramite il comando:
+```
+docker pull postgres
+```
+
+Creare un volume per avere i dati persistenti:
+```
+docker volume create --name=postgresdata
+```
+
+Stringa per runnare il container:
+```
+docker run --name postgresdb -v postgresdata:/data/db -d -p 5432:5432 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=maadb postgres
+```
 
 ## VSCode
 Scaricare ed installare l'estensione "MongoDB for VS Code" dal Marketplace di VSCode:
