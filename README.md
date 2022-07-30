@@ -51,7 +51,12 @@ Questi sono le operazioni effettuate:
 
 ## Installare librerie
 
-Prima di iniziare è necessario installare tutte le librerie richieste (import della prima cella) per eseguire la prima cella che carica tutto il necessario, installandole tramite:
+Da linea di comando, posizionandosi nella cartella "Code", è necessario installare tutte le librerie richieste per eseguire la prima cella che carica tutto il necessario, installandole tramite:
+```
+pip install -r requirements.txt
+```
+
+Se ne mancano altre, installarle a mano tramite:
 ```
 pip install <nomeLibreria>
 ```
@@ -90,7 +95,8 @@ A questo punto si possono creare database e collezioni.
 
 ### Postgres
 
-Scaricare Postgres in locale da: 
+Scaricare Postgres in locale da: https://www.postgresql.org/download/.
+Una volta installato 
 
 ## VSCode per visualizzare le modifiche
 Scaricare ed installare l'estensione "MongoDB for VS Code" dal Marketplace di VSCode per visualizzare tutte gli inserimenti/modifiche:
