@@ -36,9 +36,7 @@ Questi sono i risultati finali:
 - per ogni sentimento è stata creata una word cloud con le parole maggiormente presenti nei tweet (la grandezza del carattere nella word cloud è proporzionale alla frequenza nei messaggi tweet).
 - è stata creata una word cloud anche per le emoji, le emoticons e gli hashtags.
 - vengono calcolate, tramite Pipeline di Mongo e DB Relazione, due percentuali per ogni risorsa lessicale come mostrato nella figura sottostante:
-
 ![Immagine Percentuali](http://drive.google.com/uc?export=view&id=1-Ach8t9DVPMIQzrbxbn9655aKo2T5f6H)
-
 Nella figura si mostrano due insiemi di parole che sono il risultato dell’elaborazione delle due sorgenti (risorse lessicali X per un determinato sentimento Y, in cui il numero totale delle parole è N_lex_words(X) e messaggi tweets etichettati con lo stesso sentimento Y, in cui il numero totale delle parole è N_twitter_words(Y). L’intersezione tra i due insiemi contiene le parole comuni N_shared_words(X,Y) e le due formule mostrano come sono state calcolate le percentuali. 
 - è stato creato un istogramma per ciascun sentimento con le due percentuali calcolate precedentemente. 
 - sono state raccolte le parole “nuove” presenti nella sorgente Tweet ma non nelle risorse lessicali (cartella "Nuove Parole").
