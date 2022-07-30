@@ -37,9 +37,10 @@ Questi sono i risultati finali:
 - è stata creata una word cloud anche per le emoji, le emoticons e gli hashtags.
 - vengono calcolate, tramite Pipeline di Mongo e DB Relazione, due percentuali per ogni risorsa lessicale come mostrato nella figura sottostante:
 ![Immagine Percentuali](http://drive.google.com/uc?export=view&id=1-Ach8t9DVPMIQzrbxbn9655aKo2T5f6H)
-Nella figura si mostrano due insiemi di parole che sono il risultato dell’elaborazione delle due sorgenti (risorse lessicali X per un determinato sentimento Y, in cui il numero totale delle parole è N_lex_words(X) e messaggi tweets etichettati con lo stesso sentimento Y, in cui il numero totale delle parole è N_twitter_words(Y). L’intersezione tra i due insiemi contiene le parole comuni N_shared_words(X,Y) e le due formule mostrano come sono state calcolate le percentuali. 
+
+- nella figura precedente si mostrano due insiemi di parole che sono il risultato dell’elaborazione delle due sorgenti (risorse lessicali X per un determinato sentimento Y, in cui il numero totale delle parole è N_lex_words(X) e messaggi tweets etichettati con lo stesso sentimento Y, in cui il numero totale delle parole è N_twitter_words(Y). L’intersezione tra i due insiemi contiene le parole comuni N_shared_words(X,Y) e le due formule mostrano come sono state calcolate le percentuali. 
 - è stato creato un istogramma per ciascun sentimento con le due percentuali calcolate precedentemente. 
-- sono state raccolte le parole “nuove” presenti nella sorgente Tweet ma non nelle risorse lessicali (cartella "Nuove Parole").
+- sono state raccolte le parole “nuove” presenti nella sorgente Tweet ma non nelle risorse lessicali (cartella "Nuove Parole", ma sarebbero da esaminare ed elaborare perchè ci sono molte parole inutili).
 
 ### Come sono state trattate le risorse lessicali
 
@@ -62,8 +63,7 @@ pip install <nomeLibreria>
 ```
 
 ## Connettere MongoDB come Container Docker
-## Docker
-### Mongo
+## Docker + MongoDB
 Scaricare l'ultima immagine di MongoDB tramite il comando:
 ```
 docker pull mongo
@@ -93,10 +93,16 @@ db.createUser({
 
 A questo punto si possono creare database e collezioni.
 
-### Postgres
+## PostgreSQL
 
 Scaricare Postgres in locale da: https://www.postgresql.org/download/.
-Una volta installato 
+Avviare l'installazione e durante l'installazione inserire come password globale per l'accesso come utente "postgres" (superuser), il valore "admin" e come porta 5432.
+Se si impostano altre configurazioni, deve essere aggiornata la connessione al DB nel codice.
+
+Una volta installato, aprire "pgAdmin" e connettersi al server "PostgreSQL 14" inserendo come password "admin".
+Successivamente creare un nuovo database premendo con il tasto destro su "Databases". Inserire come nel database "maadb" e creare il database.
+
+A questo punto si può utilizzare il database PostgreSQL.
 
 ## VSCode per visualizzare le modifiche
 Scaricare ed installare l'estensione "MongoDB for VS Code" dal Marketplace di VSCode per visualizzare tutte gli inserimenti/modifiche:
@@ -113,3 +119,9 @@ mongodb://admin:admin@localhost:27017/admin
 ```
 
 A questo punto la connessione è stabilita e si può iniziare a lavorare su MongoDB tramite VSCode, anche dal Playground.
+
+## Video esecuzione del progetto
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=01fXfvPRq1Q
+" rel="noopener" target="_blank"><img src="http://img.youtube.com/vi/01fXfvPRq1Q/0.jpg" 
+alt="Esecuzione MAADB" width="400" border="10" /></a>
