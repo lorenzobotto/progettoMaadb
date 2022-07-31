@@ -66,21 +66,21 @@ Da riga di comando, scaricare l'ultima immagine di MongoDB:
 ```
 docker pull mongo
 ```
-Da riga di comando, creare un volume per avere i dati persistenti:
+Creare un volume per avere i dati persistenti:
 ```
 docker volume create --name=mongodata
 ```
-Da riga di comando, eseguire il container:
+Eseguire il container:
 ```
 docker run --name mongodb -v mongodata:/data/db -d -p 27017:27017 mongo
 ```
-Da riga di comando, creare l'utente per l'autenticazione, spostandosi nella bash, successivamente nel mongo management ed infine nel database admin:
+Creare l'utente per l'autenticazione, spostandosi nella bash, successivamente nel mongo management ed infine nel database admin:
 ```
 docker exec -it mongodb bash
 mongo
 use admin
 ```
-Da riga di comando, creare l'utente con la password:
+Creare l'utente con la password:
 ```
 db.createUser({
   user: "admin", 
