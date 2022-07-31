@@ -58,11 +58,6 @@ Da linea di comando, posizionandosi nella cartella "Code", è necessario install
 pip install -r requirements.txt
 ```
 
-Se ne mancano altre, installarle a mano tramite:
-```
-pip install <nomeLibreria>
-```
-
 ## Connettere MongoDB come Container Docker
 ## Docker + MongoDB
 Scaricare l'ultima immagine di MongoDB tramite il comando:
@@ -97,10 +92,10 @@ A questo punto si possono creare database e collezioni.
 ## PostgreSQL
 
 Scaricare Postgres in locale da: https://www.postgresql.org/download/.
-Avviare l'installazione e durante l'installazione inserire come password globale per l'accesso come utente "postgres" (superuser), il valore "admin" e come porta 5432.
+Avviare l'installazione e durante l'installazione (lasciando tutte le impostazioni standard, installando tutti i componenti) inserire come password globale per l'accesso come utente "postgres" (superuser), il valore "admin" e come porta 5432 (che è quella standard).
 Se si impostano altre configurazioni, deve essere aggiornata la connessione al DB nel codice.
 
-Una volta installato, aprire "pgAdmin" e connettersi al server "PostgreSQL 14" inserendo come password "admin".
+Una volta installato, aprire il programma "pgAdmin", il quale è stato installato durante l'installazione di PostgreSQL, e connettersi al server "PostgreSQL 14" inserendo come password "admin".
 Successivamente creare un nuovo database premendo con il tasto destro su "Databases". Inserire come nel database "maadb" e creare il database.
 
 A questo punto si può utilizzare il database PostgreSQL.
