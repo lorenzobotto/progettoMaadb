@@ -62,25 +62,25 @@ pip install -r requirements.txt
 
 ## Connettere MongoDB come Container Docker
 ## Docker + MongoDB
-Scaricare l'ultima immagine di MongoDB tramite il comando:
+Da linea di comando, scaricare l'ultima immagine di MongoDB:
 ```
 docker pull mongo
 ```
-Creare un volume per avere i dati persistenti:
+Da linea di comando, creare un volume per avere i dati persistenti:
 ```
 docker volume create --name=mongodata
 ```
-Eseguire il container:
+Da linea di comando, eseguire il container:
 ```
 docker run --name mongodb -v mongodata:/data/db -d -p 27017:27017 mongo
 ```
-Creare l'utente per l'autenticazione, spostandosi nella bash, successivamente nel mongo management ed infine nel database admin:
+Da linea di comando, creare l'utente per l'autenticazione, spostandosi nella bash, successivamente nel mongo management ed infine nel database admin:
 ```
 docker exec -it mongodb bash
 mongo
 use admin
 ```
-Creare l'utente con la password:
+Da linea di comando, creare l'utente con la password:
 ```
 db.createUser({
   user: "admin", 
