@@ -55,32 +55,32 @@ Questi sono le operazioni effettuate:
 
 ## Installare librerie
 
-Da linea di comando, posizionandosi nella cartella "Code", è necessario installare tutte le librerie richieste per eseguire la prima cella che carica tutto il necessario, installandole tramite:
+Da riga di comando, posizionandosi nella cartella "Code", è necessario installare tutte le librerie richieste per eseguire la prima cella che carica tutto il necessario, installandole tramite:
 ```
 pip install -r requirements.txt
 ```
 
 ## Connettere MongoDB come Container Docker
 ## Docker + MongoDB
-Da linea di comando, scaricare l'ultima immagine di MongoDB:
+Da riga di comando, scaricare l'ultima immagine di MongoDB:
 ```
 docker pull mongo
 ```
-Da linea di comando, creare un volume per avere i dati persistenti:
+Da riga di comando, creare un volume per avere i dati persistenti:
 ```
 docker volume create --name=mongodata
 ```
-Da linea di comando, eseguire il container:
+Da riga di comando, eseguire il container:
 ```
 docker run --name mongodb -v mongodata:/data/db -d -p 27017:27017 mongo
 ```
-Da linea di comando, creare l'utente per l'autenticazione, spostandosi nella bash, successivamente nel mongo management ed infine nel database admin:
+Da riga di comando, creare l'utente per l'autenticazione, spostandosi nella bash, successivamente nel mongo management ed infine nel database admin:
 ```
 docker exec -it mongodb bash
 mongo
 use admin
 ```
-Da linea di comando, creare l'utente con la password:
+Da riga di comando, creare l'utente con la password:
 ```
 db.createUser({
   user: "admin", 
