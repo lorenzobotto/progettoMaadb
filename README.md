@@ -16,6 +16,8 @@ Come input si avranno:
 - risorse lessicali per ogni sentimento, con una lista delle parole per quel sentimento;
 - dataset di tweets: il dataset consiste in un insieme di otto files contenenti ciascuno sessantamila messaggi reali di utenti, scambiati su Twitter (detti tweets). I file sono denominati con un sentimento associato ai messaggi. 
 
+Tutte le elaborazioni che verranno descritte successivamente sono state replicate per tutti i Dataset.
+
 ### Come sono stati trattati i tweet
 
 Queste sono le operazioni effettuate sui tweet per elaborarli:
@@ -116,7 +118,7 @@ mongodb://admin:admin@localhost:27017/admin
 
 A questo punto la connessione è stabilita e si può iniziare a lavorare su MongoDB tramite VSCode, anche dal Playground.
 
-## Video esecuzione del progetto
+## Video esecuzione del progetto (Dataset Anger)
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=01fXfvPRq1Q
 " rel="noopener" target="_blank"><img src="http://img.youtube.com/vi/01fXfvPRq1Q/0.jpg" 
