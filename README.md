@@ -1,9 +1,9 @@
 # Progetto MAADB
-Progetto in Python (Jupyter Notebook) e MongoDB - Analisi Dataset Twitter - Corso di Modelli e Architetture Avanzati di Basi di Dati - Unito 2022.
+Progetto in Python (Jupyter Notebook) e MongoDB - Analisi Dataset Twitter per confrontare un database NoSQL con un database relazione - Corso di Modelli e Architetture Avanzati di Basi di Dati - Unito 2022.
 
 ## Descrizione Progetto
 
-Viene analizzato il dataset dei tweet tramite Jupyter Notebook (Python) e l'utilizzo di un database NoSQL (MongoDB) e un database relazionale (PostgreSQL). Ad ogni messaggio è associato un sentimento che si suppone sia il sentimento espresso dal messaggio.
+Viene analizzato il dataset dei tweet tramite Jupyter Notebook (Python) e l'utilizzo di un database NoSQL (MongoDB) e un database relazionale (PostgreSQL), in modo tale da confrontare le prestazioni di un database NoSQL e un database relazionale. Ad ogni messaggio è associato un sentimento che si suppone sia il sentimento espresso dal messaggio.
 
 Tale dataset consiste in un grande numero di messaggi reali di utenti, scambiati sulla popolare piattaforma di microblogging Twitter (detti tweets). 
 Si richiede di trovare quali parole sono le più frequenti per ogni sentimento. I messaggi sono in inglese.
